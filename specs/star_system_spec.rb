@@ -8,7 +8,7 @@ require_relative('../star_system')
 class TestStarSystem < Minitest::Test
 
   def setup
-    skip
+    
     @earth = Planet.new("Earth", 12756, 149.6, 1)
     @jupiter = Planet.new("Jupiter", 142796, 778.3, 67)
     @mars = Planet.new("Mars", 6787, 227.9, 2)
@@ -24,12 +24,10 @@ class TestStarSystem < Minitest::Test
   end
 
   def test_has_name
-    skip
     assert_equal("Solar System", @solar_system.name)
   end
 
   def test_has_planets
-    skip
     assert_equal(9, @solar_system.planets.count)
   end
   
