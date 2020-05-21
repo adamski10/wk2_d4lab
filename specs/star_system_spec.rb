@@ -32,19 +32,16 @@ class TestStarSystem < Minitest::Test
   end
   
   def test_planet_names
-    skip
     expected_names = ["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Pluto", "Saturn", "Uranus", "Venus"]
     assert_equal(expected_names, @solar_system.planet_names)
   end
   
   def test_get_planet_by_name
-    skip
     result = @solar_system.get_planet_by_name("Mars")
     assert_equal(@mars, result)
   end
   
   def test_get_planets_with_no_moons
-    skip
     expected_planets = [ @mercury, @venus ]
     result = @solar_system.get_planets_with_no_moons
     assert_equal(expected_planets, result)
