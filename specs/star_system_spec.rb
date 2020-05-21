@@ -48,7 +48,6 @@ class TestStarSystem < Minitest::Test
   end
   
   def test_get_names_of_planet_with_more_than_four_moons
-    skip
     expected_names = ["Jupiter", "Neptune", "Saturn", "Uranus"]
     result = @solar_system.get_planets_with_more_moons(4)
     assert_equal(expected_names, result)

@@ -23,10 +23,21 @@ class StarSystem
     return planets_without_moons    
   end
     
+  def get_planets_with_more_moons(number)
+    planets_with_moons = @planets.find_all do |planet| 
+        if planet.number_of_moons >= number
+          planet_name
+        end
+      end
+      
+    return planets_with_moons.find_all { |name| planets_with_moons.name}
+  end
+
+  # def test_get_names_of_planet_with_more_than_four_moons
+  #   skip
+  #   expected_names = ["Jupiter", "Neptune", "Saturn", "Uranus"]
+  #   result = @solar_system.get_planets_with_more_moons(4)
+  #   assert_equal(expected_names, result)
+  # end
 end
 
-# def test_get_planets_with_no_moons
-#   expected_planets = [ @mercury, @venus ]
-#   result = @solar_system.get_planets_with_no_moons
-#   assert_equal(expected_planets, result)
-# end
